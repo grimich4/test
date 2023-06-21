@@ -1,4 +1,5 @@
 #!/bin/sh
+#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
 
 # Set the IFS (Internal Field Separator) to ':' to split the PATH variable correctly
 IFS=":"
