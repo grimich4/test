@@ -19,7 +19,7 @@ if [ "$1" = "-a" ]; then
   print_all_paths=1
   shift  # Remove the -a option from the arguments
 elif [ "${1#-}" != "$1" ]; then
-  echo >&2 "which: unknown option '$1'"
+  echo >&2 "which: unknown option -- ${1#-}"
   exit 1
 fi
 
