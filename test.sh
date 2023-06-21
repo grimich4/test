@@ -12,10 +12,10 @@ check()
     printf "${BLUE}________________________NEW_TEST________________________${NC}\n"
     echo test\: "$@"
 
-    which $@ > find.out
+    which $@ 2> find.out
     find_return_code=$?
 
-    ./which2.sh $@ > myfind.out
+    ./which2.sh $@ 2> myfind.out
     myfind_return_code=$?
 
     echo -n "exit_code: "
@@ -41,4 +41,4 @@ check -a gcc curl -a which
 check -d gcc curl -a which
 check dontexist
 
-rm find.out myfind.out
+# rm find.out myfind.out

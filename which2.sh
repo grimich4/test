@@ -61,7 +61,7 @@ for command in "$@"; do
     if [ "$return_code" -eq 0 ]; then
         return_code=2
     fi
-    echo "which: $command: Command not found."
+    echo >&2 "which: $command: Command not found."
   fi
 done
 
