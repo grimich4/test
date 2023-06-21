@@ -6,7 +6,7 @@ IFS=":"
 
 # Check if no arguments are provided
 if [ $# -eq 0 ]; then
-  echo >&2 "usage : which [−a] name ..."
+  echo >&2 "usage: which [-a] name ..."
   exit 1
 fi
 
@@ -20,7 +20,7 @@ if [ "$1" = "-a" ]; then
   shift  # Remove the -a option from the arguments
 elif [ "${1#-}" != "$1" ]; then
   echo >&2 "which: unknown option -- ${1#-}"
-  echo >&2 "usage : which [−a] name ..."
+  echo >&2 "usage: which [-a] name ..."
   exit 1
 fi
 
